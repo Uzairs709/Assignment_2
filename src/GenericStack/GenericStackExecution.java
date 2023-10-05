@@ -2,7 +2,6 @@ package GenericStack;
 
 import java.util.EmptyStackException;
 import java.util.Scanner;
-
 public class GenericStackExecution {
     private static void menu(){
         System.out.println("Stack Operations");
