@@ -13,6 +13,7 @@ public class FirstNonRepeating {
 
 
     public void input(){
+        System.out.print("Enter String: ");
         Scanner scanner=new Scanner(System.in);
         System.out.print("Enter String: ");
         String s=scanner.next();
