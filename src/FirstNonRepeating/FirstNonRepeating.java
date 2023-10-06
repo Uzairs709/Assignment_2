@@ -14,6 +14,7 @@ public class FirstNonRepeating {
 
     public void input(){
         Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter String: ");
         String s=scanner.next();
         for (int i=0;i<s.length();i++) {
             int x = -1;
