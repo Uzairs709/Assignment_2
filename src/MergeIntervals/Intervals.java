@@ -28,8 +28,8 @@ public class Intervals {
         for(int i=1;i<=intervalList.size()-1;i++){
 
 
-           if(intervalList.get(i-1)[0]<intervalList.get(i)[0]){
-               if(intervalList.get(i-1)[1]>intervalList.get(i)[0]){
+           if(intervalList.get(i-1)[0]<=intervalList.get(i)[0]){
+               if(intervalList.get(i-1)[1]>=intervalList.get(i)[0]){
                    int change =Math.max(intervalList.get(i-1)[1],intervalList.get(i)[1]);
                    intervalList.get(i-1)[1]=change;
                    intervalList.remove(i);
