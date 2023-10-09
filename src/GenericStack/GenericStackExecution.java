@@ -1,6 +1,10 @@
 package GenericStack;
 
+import javax.naming.directory.InvalidAttributeIdentifierException;
+import javax.naming.directory.InvalidAttributesException;
+import java.io.InvalidObjectException;
 import java.util.EmptyStackException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class GenericStackExecution {
     private static void menu(){
@@ -31,7 +35,10 @@ public class GenericStackExecution {
                     } catch (StackOverflowError e) {
                         e.printStackTrace();
                         System.out.println("Stack is full");
+                    }catch(InputMismatchException ev){
+                        System.out.println(ev.getMessage());
                     }
+
                     finally {
                         break;
                     }
