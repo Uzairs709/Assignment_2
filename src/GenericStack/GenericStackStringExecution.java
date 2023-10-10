@@ -1,12 +1,10 @@
 package GenericStack;
 
-import javax.naming.directory.InvalidAttributeIdentifierException;
-import javax.naming.directory.InvalidAttributesException;
-import java.io.InvalidObjectException;
 import java.util.EmptyStackException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-public class GenericStackExecution {
+
+public class GenericStackStringExecution {
     private static void menu(){
         System.out.println("Stack Operations");
         System.out.println("1.Push");
@@ -20,7 +18,7 @@ public class GenericStackExecution {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the size for Stack: ");
         int size = scanner.nextInt();
-        GenericStack<Integer> genericStack = new GenericStack<Integer>(size);
+        GenericStack<String> genericStack = new GenericStack<String>(size);
         while (true) {
             menu();
             System.out.print("Enter Your Choice: ");
@@ -29,7 +27,7 @@ public class GenericStackExecution {
                 case 1: //Push
                     try {
                         System.out.println("Enter Element: ");
-                        Integer element=scanner.nextInt();
+                        String element=scanner.nextLine();
                         genericStack.push(element);
 
                     } catch (StackOverflowError e) {
@@ -69,7 +67,7 @@ public class GenericStackExecution {
                     break;
                 case 5:
                     if(genericStack.isEmpty())
-                    System.out.println("Stack is Empty");
+                        System.out.println("Stack is Empty");
                     else System.out.println("Stack is not Empty");
                     break;
                 case 6:
